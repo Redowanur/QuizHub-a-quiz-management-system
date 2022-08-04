@@ -1,5 +1,6 @@
 package mc;
 
+import com.k33ptoo.components.KButton;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -18,6 +19,7 @@ import keeptoo.KGradientPanel;
 public class HomePage extends JFrame implements MouseInputListener{
     KGradientPanel pan;
     JLabel label5, a, label6, label7, b;
+    KButton adPan;
     int x, y, xx, yy;
 
     public HomePage() {
@@ -140,6 +142,22 @@ public class HomePage extends JFrame implements MouseInputListener{
         teacherLabel.addMouseListener(this);
         homePageBG.add(teacherLabel);
         
+        adPan = new KButton();
+        adPan.setkHoverForeGround(Color.white);
+        adPan.setText("Admin Panel");
+        adPan.setBorder(null);
+        adPan.setFocusable(false);
+        adPan.setFont(new java.awt.Font("Segoe UI", 0, 12));
+        adPan.setBounds(875, 605, 108, 23);
+        adPan.setkStartColor(new Color(15, 32, 39));
+        adPan.setkEndColor(new Color(32, 58, 67));
+        adPan.setkBorderRadius(12);
+        adPan.setkHoverStartColor(new Color(32, 58, 67));
+        adPan.setkHoverEndColor(new Color(15, 32, 39));
+        adPan.setkIndicatorThickness(5);
+        adPan.addMouseListener(this);
+        homePageBG.add(adPan);
+        
         BackgroundImage.setIcon(new ImageIcon("src/mc/assests/homepagebg.jpg")); // NOI18N
         BackgroundImage.setPreferredSize(new java.awt.Dimension(1000, 623));
         BackgroundImage.setBounds(0, 27, 1000, 623);
@@ -155,11 +173,9 @@ public class HomePage extends JFrame implements MouseInputListener{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(homePageBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        //add(homePageBG);
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>                        
-
+    
     private void panMousePressed(java.awt.event.MouseEvent evt) {                                      
         xx = evt.getX();
         yy = evt.getY();
@@ -172,7 +188,7 @@ public class HomePage extends JFrame implements MouseInputListener{
     }  
 
     public static void main(String[] args) {
-        new HomePage();
+        new HomePage().setVisible(true);
     }                                      
                     
     private javax.swing.JLabel BackgroundImage;
@@ -188,13 +204,19 @@ public class HomePage extends JFrame implements MouseInputListener{
         if(e.getSource() == studentLabel){
             studentLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
             StudentLogIn s = new StudentLogIn();
-            s.setLocationRelativeTo(null);
+            s.setLocation(this.getX(), this.getY());
             dispose();
         }
         if(e.getSource() == teacherLabel){
             teacherLabel.setCursor(new Cursor(Cursor.HAND_CURSOR));
             TeacherLogIn t = new TeacherLogIn();
             t.setLocationRelativeTo(null);
+            dispose();
+        }
+        if(e.getSource() == adPan){
+            AdminLogIn ad = new AdminLogIn();
+            ad.setVisible(true);
+            ad.setLocation(this.getX(), this.getY());
             dispose();
         }
         if(e.getSource() == a) {
