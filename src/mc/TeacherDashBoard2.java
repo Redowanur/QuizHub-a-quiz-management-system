@@ -231,6 +231,7 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
         jScrollPane3 = new javax.swing.JScrollPane();
         Results = new rojerusan.RSTableMetro();
         jLabel4 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -449,7 +450,6 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
         exam_list.setMultipleSeleccion(false);
         exam_list.setName(""); // NOI18N
         exam_list.setRowHeight(26);
-        exam_list.setRowMargin(0);
         exam_list.setSelectionBackground(new java.awt.Color(232, 57, 95));
         exam_list.setShowGrid(false);
         exam_list.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -504,7 +504,7 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
         panelRound3Layout.setHorizontalGroup(
             panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(8, Short.MAX_VALUE)
                 .addGroup(panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(DeptLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(emailLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -554,7 +554,7 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
                         .addContainerGap()
                         .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         panelRound4Layout.setVerticalGroup(
@@ -571,7 +571,7 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
         );
 
         DashBoardPanel.add(panelRound4);
-        panelRound4.setBounds(22, 21, 780, 127);
+        panelRound4.setBounds(22, 21, 768, 104);
 
         kButton2.setVisible(false);
         kButton2.setBorder(null);
@@ -703,7 +703,7 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
                     .addComponent(marksSetter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(63, 63, 63)
                 .addComponent(kButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab2", CreateQuiz);
@@ -918,7 +918,7 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
                 .addComponent(examChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(283, Short.MAX_VALUE))
+                .addContainerGap(259, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab4", jPanel1);
@@ -1169,7 +1169,6 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
         Results.setMultipleSeleccion(false);
         Results.setName(""); // NOI18N
         Results.setRowHeight(26);
-        Results.setRowMargin(0);
         Results.setSelectionBackground(new java.awt.Color(232, 57, 95));
         Results.setShowGrid(false);
         Results.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1216,13 +1215,26 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
                         .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
                         .addComponent(GetResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab6", ResultPanel);
 
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 830, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 599, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("tab7", jPanel3);
+
         BackgroundPanel.add(jTabbedPane1);
-        jTabbedPane1.setBounds(170, -3, 830, 653);
+        jTabbedPane1.setBounds(170, 30, 830, 630);
 
         getContentPane().add(BackgroundPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 650));
 
@@ -1867,6 +1879,7 @@ public class TeacherDashBoard2 extends javax.swing.JFrame implements MouseInputL
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
